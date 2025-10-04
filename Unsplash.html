@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniSplash - Free Stock Photos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        }
+
+        one {
+            background-color: #f5f5f5;
+            color: #111;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* Sidebar (Desktop) */
+        .sidebar {
+            width: 240px;
+            background: #111;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .sidebar nav a {
+            display: block;
+            color: #ccc;
+            padding: 12px 0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .sidebar nav a:hover {
+            color: white;
+        }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+
+        /* Mobile Topbar */
+        .mobile-header {
+            display: none;
+            width: 100%;
+            background: #111;
+            color: white;
+            padding: 15px 20px;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .mobile-header .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Mobile Dropdown */
+        .mobile-dropdown {
+            display: none;
+            flex-direction: column;
+            background: #111;
+            padding: 10px 20px;
+            position: fixed;
+            top: 55px;
+            width: 100%;
+            z-index: 999;
+        }
+
+        .mobile-dropdown a {
+            color: white;
+            padding: 12px 0;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+            transition: background 0.3s;
+        }
+
+        .mobile-dropdown a:hover {
+            background: #222;
+        }
+
+        .mobile-dropdown.show {
+            display: flex;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 240px;
+            padding: 20px;
+        }
+
+        /* Desktop Header */
+        .desktop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .desktop-header .search-bar input {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            width: 300px;
+            font-size: 14px;
+        }
+
+        .desktop-header .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #767676;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .desktop-header .nav-links a:hover {
+            color: #111;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 20px;
+            background: url('https://images.unsplash.com/photo-1754764464593-638adca1eb4f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI5fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            max-width: 600px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content .search-bar input {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        /* Trending Searches */
+        .trending-searches {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .trending-searches button {
+            padding: 8px 16px;
+            margin: 5px;
+            border: 1px solid #333;
+            background: white;
+            cursor: pointer;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .trending-searches button:hover {
+            background: #f0f0f0;
+        }
+
+        /* Image Grid */
+        .image-grid {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .image-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .image-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-card:hover .image-info {
+            opacity: 1;
+        }
+
+        .image-info p {
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1000px) {
+            .desktop-header .search-bar input {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .desktop-header .nav-links a {
+                margin: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .mobile-header {
+                display: flex;
+            }
+
+            .main-content {
+                margin-left: 0;
+                margin-top: 60px;
+            }
+
+            .hero {
+                height: 300px;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .image-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                height: 200px;
+            }
+
+            .hero-content h1 {
+                font-size: 24px;
+            }
+
+            .hero-content p {
+                font-size: 14px;
+            }
+
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+    <!-- Mobile Topbar -->
+    <header class="mobile-header">
+        <div class="logo">MiniSplash</div>
+        <div class="menu-toggle" onclick="toggleDropdown()">☰</div>
+    </header>
+
+    <!-- Mobile Dropdown -->
+    <div class="mobile-dropdown" id="mobileDropdown">
+        <a href="#">Home</a>
+        <a href="Unsplash.html">Photos</a>
+        <a href="illu.html">Illustrations</a>
+    </div>
+
+    <!-- Sidebar (Desktop) -->
+    <aside class="sidebar">
+        <div class="logo">MiniSplash</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="Unsplash.html">Photos</a>
+            <a href="illu.html">Illustrations</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="desktop-header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search photos...">
+            </div>
+            <div class="nav-links">
+                <a href="#">Explore</a>
+                <a href="#">Collections</a>
+                <a href="#">MiniSplash+</a>
+                <a href="login.html">Login</a>
+                <a href="#">Submit a photo</a>
+            </div>
+	
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>MiniSplash</h1>
+                <p>Beautiful, free photos and illustrations that you can download and use for any project.</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search photos...">
+                </div>
+            </div>
+        </section>
+
+        <section class="trending-searches">
+            <button>Alaska</button>
+            <button>Astrophotography</button>
+            <button>Graphic Design</button>
+            <button>Acropolis</button>
+            <button>Chevrolet</button>
+            <button>Art Class</button>
+            <p>Explore trending searches</p>
+        </section>
+
+        <section class="image-grid">
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1758633370468-686fba5ead85?w=800&auto=format&fit=crop&q=60" alt="Green Forest">
+                <div class="image-info">
+                    <p>Green Forest</p>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1759130087819-db88758c3fab?w=800&auto=format&fit=crop&q=60" alt="Northern Lights">
+                <div class="image-info">
+                    <p>Northern Lights</p>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1759127352237-247ab3cb4548?w=800&auto=format&fit=crop&q=60" alt="Mountains">
+                <div class="image-info">
+                    <p>Mountains</p>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1758944967510-844cf9078c35?w=800&auto=format&fit=crop&q=60" alt="Mountains">
+                <div class="image-info">
+                    <p>Beach</p>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1759503408354-8cfa8a13115e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mountains">
+                <div class="image-info">
+                    <p>Beach</p>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="https://plus.unsplash.com/premium_photo-1759494145084-7cdfa7049c13?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8" alt="Mountains">
+                <div class="image-info">
+                    <p>Mushroom</p>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1759503076789-f35229bf5123?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8" alt="Mountains">
+                <div class="image-info">
+                    <p>Women in dramatic sunlight</p>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1759352371478-6071563e058a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1MXx8fGVufDB8fHx8fA%3D%3D" alt="Mountains">
+                <div class="image-info">
+                    <p>Lion</p>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1759504677326-ed09c6dc7bc8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8" alt="Mountains">
+                <div class="image-info">
+                    <p>Skyscraper in illuminated light</p>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="https://plus.unsplash.com/premium_photo-1759353494863-d4da32a4b5cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0OXx8fGVufDB8fHx8fA%3D%3D" alt="Mountains">
+                <div class="image-info">
+                    <p>Owl</p>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1759263888702-46b3b86c2bb3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D" alt="Mountains">
+                <div class="image-info">
+                    <p>Shadow of a hand</p>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1759509326919-7f5d3961f8f1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D" alt="Mountains">
+                <div class="image-info">
+                    <p>Train at modern station</p>
+                </div>
+            </div>
+            
+    </main>
+    </div>
+
+    <footer>
+        <p>© 2025 MiniSplash. Free stock photos inspired by Unsplash.</p>
+    </footer>
+
+    <script>
+        function toggleDropdown() {
+            document.getElementById("mobileDropdown").classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
