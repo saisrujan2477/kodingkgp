@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unsplash - Free Stock Illustrations</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Unplash - Free Stock Photos</title>
     <style>
         * {
             margin: 0;
@@ -125,6 +125,13 @@ ul li a:hover {
             display: flex;
         }
 
+        .swap{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            background-color: rgb(226, 226, 222);
+        }
+
         /* Main Content */
         .main-content {
             flex: 1;
@@ -143,13 +150,6 @@ ul li a:hover {
             position: sticky;
             top: 0;
             z-index: 100;
-        }
-
-        .swap{
-            display: flex;
-            flex-direction: column;
-            align-items: left;
-            background-color: rgb(226, 226, 222);
         }
 
         .desktop-header .search-bar input {
@@ -172,12 +172,10 @@ ul li a:hover {
             color: #111;
         }
 
-
-
         /* Hero Section */
         .hero {
             margin-top: 20px;
-            background: url('https://images.unsplash.com/vector-1756304370632-d94452b91904?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxpbGx1c3RyYXRpb25zLWZlZWR8MjY1fHx8ZW58MHx8fHx8') no-repeat center center/cover;
+            background: url('https://images.unsplash.com/photo-1754764464593-638adca1eb4f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI5fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D') no-repeat center center/cover;
             height: 400px;
             display: flex;
             align-items: center;
@@ -283,8 +281,8 @@ ul li a:hover {
         footer {
             text-align: center;
             padding: 20px;
-            background-color: white;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            background-color: rgb(240, 236, 236);
+            box-shadow: 0 -2px 5px rgba(248, 8, 8, 0.1);
             color: #888;
             font-size: 14px;
         }
@@ -353,7 +351,7 @@ ul li a:hover {
                 grid-template-columns: 1fr;
             }
         }
-         * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -454,6 +452,7 @@ ul li a:hover {
         .social-icons a:hover {
             color: #9ca3af;
         }
+
     </style>
 </head>
 <body>
@@ -485,7 +484,7 @@ ul li a:hover {
     <main class="main-content">
         <header class="desktop-header">
             <div class="search-bar">
-                <input type="text" placeholder="Search Illustrations...">
+                <input type="text" placeholder="Search photos...">
             </div>
             <div class="nav-links">
                 <a href="#">Explore</a>
@@ -496,12 +495,12 @@ ul li a:hover {
             </div>
 	
         </header>
+
         <section class="swap">
             <div class="top-nav">
-                <a href="illu.html">Featured</a>
-                <a href="wallpaper.html">Wallpapers</a>
+                <a href="index.html">Featured</a>
+                <a href="Nature.html">Nature</a>
             </div>
-
         </section>
 
         <section class="hero">
@@ -509,97 +508,98 @@ ul li a:hover {
                 <h1>Unsplash</h1>
                 <p>Beautiful, free photos and illustrations that you can download and use for any project.</p>
                 <div class="search-bar">
-                    <input type="text" placeholder="Search Illustrations...">
+                    <input type="text" placeholder="Search photos...">
                 </div>
             </div>
         </section>
 
         <section class="trending-searches">
-            <button>Banana Tree</button>
-            <button>Fastfood</button>
-            <button>Athletes</button>
-            <button>Arsenal</button>
-            <button>Fine art</button>
-            <button>Space</button>
+            <button>Alaska</button>
+            <button>Astrophotography</button>
+            <button>Graphic Design</button>
+            <button>Acropolis</button>
+            <button>Chevrolet</button>
+            <button>Art Class</button>
             <p>Explore trending searches</p>
         </section>
 
         <section class="image-grid">
             <div class="image-card">
-                <img src="https://plus.unsplash.com/premium_vector-1758113271812-92d9019921f3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxpbGx1c3RyYXRpb25zLWZlZWR8MTAxfHx8ZW58MHx8fHx8" alt="Campfire in snow">
+                <img src="https://images.unsplash.com/photo-1758633370468-686fba5ead85?w=800&auto=format&fit=crop&q=60" alt="Looking out of a window">
                 <div class="image-info">
-                    <p>Campfire in snow</p>
+                    <p>Looking out of a window</p>
                 </div>
             </div>
             <div class="image-card">
-                <img src="https://images.unsplash.com/vector-1751369568910-faa4888a9eb3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxpbGx1c3RyYXRpb25zLWZlZWR8NTB8fHxlbnwwfHx8fHw%3D" alt="Camera">
+                <img src="https://images.unsplash.com/photo-1759130087819-db88758c3fab?w=800&auto=format&fit=crop&q=60" alt="Mountain Water">
                 <div class="image-info">
-                    <p>Camera</p>
+                    <p>Mountain Water</p>
                 </div>
             </div>
             <div class="image-card">
-                <img src="https://plus.unsplash.com/premium_vector-1756107119842-6cdab0d23e3c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxpbGx1c3RyYXRpb25zLWZlZWR8Mjd8fHxlbnwwfHx8fHw%3D" alt="Man in trance">
+                <img src="https://images.unsplash.com/photo-1759127352237-247ab3cb4548?w=800&auto=format&fit=crop&q=60" alt="Buildings">
                 <div class="image-info">
-                    <p>Man in trance</p>
+                    <p>Buildings</p>
                 </div>
             </div>
             <div class="image-card">
-                <img src="https://plus.unsplash.com/premium_vector-1709044940139-d167bb2a743b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxpbGx1c3RyYXRpb25zLWZlZWR8MTd8fHxlbnwwfHx8fHw%3D" alt="Thinking">
+                <img src="https://images.unsplash.com/photo-1758944967510-844cf9078c35?w=800&auto=format&fit=crop&q=60" alt="Pantheon">
                 <div class="image-info">
-                    <p>Thinking</p>
+                    <p>Pantheon</p>
                 </div>
             </div>
             <div class="image-card">
-                <img src="https://plus.unsplash.com/premium_vector-1757305745908-0ef1738cb334?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Verandah with coffee">
+                <img src="https://images.unsplash.com/photo-1759503408354-8cfa8a13115e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Volcano">
                 <div class="image-info">
-                    <p>Verandah with coffee</p>
+                    <p>Volcano</p>
                 </div>
             </div>
             <div class="image-card">
-                <img src="https://plus.unsplash.com/premium_vector-1757428639647-5b570f5d9d0f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxpbGx1c3RyYXRpb25zLWZlZWR8NzV8fHxlbnwwfHx8fHw%3D" alt="Hand">
+                <img src="https://plus.unsplash.com/premium_photo-1759494145084-7cdfa7049c13?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8" alt="Mushroom">
                 <div class="image-info">
-                    <p>Hand</p>
+                    <p>Mushroom</p>
                 </div>
             </div>
             <div class="image-card">
-                <img src="https://plus.unsplash.com/premium_vector-1752856090101-6df4fc5aab6a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxpbGx1c3RyYXRpb25zLWZlZWR8OTF8fHxlbnwwfHx8fHw%3D" alt="Basket Ball">
+                <img src="https://images.unsplash.com/photo-1759503076789-f35229bf5123?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8" alt="Women in dramatic sunlight">
                 <div class="image-info">
-                    <p>Basket Ball</p>
+                    <p>Women in dramatic sunlight</p>
                 </div>
             </div>
             <div class="image-card">
-                <img src="https://images.unsplash.com/vector-1754891284610-b56a3f1f062f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxpbGx1c3RyYXRpb25zLWZlZWR8MTI2fHx8ZW58MHx8fHx8" alt="Woman">
+                <img src="https://images.unsplash.com/photo-1759352371478-6071563e058a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1MXx8fGVufDB8fHx8fA%3D%3D" alt="Lion">
                 <div class="image-info">
-                    <p>Woman</p>
+                    <p>Lion</p>
                 </div>
             </div>
             <div class="image-card">
-                <img src="https://plus.unsplash.com/premium_vector-1740459974967-57b798d595c4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxpbGx1c3RyYXRpb25zLWZlZWR8MTc5fHx8ZW58MHx8fHx8" alt="Man in beach">
+                <img src="https://images.unsplash.com/photo-1759504677326-ed09c6dc7bc8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8" alt="Skyscraper in illuminated light">
                 <div class="image-info">
-                    <p>Man in beach</p>
+                    <p>Skyscraper in illuminated light</p>
                 </div>
             </div>
             <div class="image-card">
-                <img src="https://images.unsplash.com/vector-1757560589582-f50802a1d749?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxpbGx1c3RyYXRpb25zLWZlZWR8MjIxfHx8ZW58MHx8fHx8" alt="Icecream">
+                <img src="https://plus.unsplash.com/premium_photo-1759353494863-d4da32a4b5cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0OXx8fGVufDB8fHx8fA%3D%3D" alt="Owl">
                 <div class="image-info">
-                    <p>Icecream</p>
+                    <p>Owl</p>
                 </div>
             </div>
             <div class="image-card">
-                <img src="https://plus.unsplash.com/premium_vector-1757178005824-5d9b49ee48d2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxpbGx1c3RyYXRpb25zLWZlZWR8MjMyfHx8ZW58MHx8fHx8" alt="3D Mountain in phone">
+                <img src="https://images.unsplash.com/photo-1759263888702-46b3b86c2bb3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D" alt="Shadow of a hand">
                 <div class="image-info">
-                    <p>3D Mountain in phone</p>
+                    <p>Shadow of a hand</p>
                 </div>
             </div>
             <div class="image-card">
-                <img src="https://images.unsplash.com/vector-1757347132178-32406ce7bbda?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxpbGx1c3RyYXRpb25zLWZlZWR8MjMzfHx8ZW58MHx8fHx8" alt="Building Top">
+                <img src="https://images.unsplash.com/photo-1759509326919-7f5d3961f8f1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D" alt="Train at modern station">
                 <div class="image-info">
-                    <p>Building Top</p>
+                    <p>Train at modern station</p>
                 </div>
             </div>
             
     </main>
     </div>
+
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -681,7 +681,6 @@ ul li a:hover {
         </div>
         <p>© 2025 Unsplash. Free stock photos and illustrations.</p>
     </footer>
-
 
     <script>
         function toggleDropdown() {
