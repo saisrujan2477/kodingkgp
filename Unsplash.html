@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiniSplash - Free Stock Photos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Unplash - Free Stock Photos</title>
     <style>
         * {
             margin: 0;
@@ -273,8 +274,8 @@ ul li a:hover {
         footer {
             text-align: center;
             padding: 20px;
-            background-color: white;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            background-color: rgb(240, 236, 236);
+            box-shadow: 0 -2px 5px rgba(248, 8, 8, 0.1);
             color: #888;
             font-size: 14px;
         }
@@ -343,13 +344,115 @@ ul li a:hover {
                 grid-template-columns: 1fr;
             }
         }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #010810;
+            color: #ffffff;
+            padding: 3rem 1rem;
+            font-family: Arial, sans-serif;
+            width: 100%;
+            margin: 0;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        /* Medium and larger screens */
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+        /* Very small screens */
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Section Styling */
+        .footer-section h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: #9ca3af;
+        }
+
+        /* Copyright Section */
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #374151;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        /* Social Icons Styling */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            color: #d1d5db;
+            font-size: 1.5rem;
+            transition: color 0.2s;
+        }
+
+        .social-icons a:hover {
+            color: #9ca3af;
+        }
+
     </style>
 </head>
 <body>
     <div class="one">
     <!-- Mobile Topbar -->
     <header class="mobile-header">
-        <div class="logo">MiniSplash</div>
+        <div class="logo">Unsplash</div>
         <div class="menu-toggle" onclick="toggleDropdown()">☰</div>
     </header>
 
@@ -362,7 +465,7 @@ ul li a:hover {
 
     <!-- Sidebar (Desktop) -->
     <aside class="sidebar">
-        <div class="logo">MiniSplash</div>
+        <div class="logo">Unsplash</div>
         <nav>
             <a href="#">Home</a>
             <a href="Unsplash.html">Photos</a>
@@ -379,7 +482,7 @@ ul li a:hover {
             <div class="nav-links">
                 <a href="#">Explore</a>
                 <a href="#">Collections</a>
-                <a href="#">MiniSplash+</a>
+                <a href="#">Unsplash+</a>
                 <a href="login.html">Login</a>
                 <a href="#">Submit a photo</a>
             </div>
@@ -388,7 +491,7 @@ ul li a:hover {
 
         <section class="hero">
             <div class="hero-content">
-                <h1>MiniSplash</h1>
+                <h1>Unsplash</h1>
                 <p>Beautiful, free photos and illustrations that you can download and use for any project.</p>
                 <div class="search-bar">
                     <input type="text" placeholder="Search photos...">
@@ -410,31 +513,31 @@ ul li a:hover {
             <div class="image-card">
                 <img src="https://images.unsplash.com/photo-1758633370468-686fba5ead85?w=800&auto=format&fit=crop&q=60" alt="Green Forest">
                 <div class="image-info">
-                    <p>Green Forest</p>
+                    <p>Looking out of a window</p>
                 </div>
             </div>
             <div class="image-card">
                 <img src="https://images.unsplash.com/photo-1759130087819-db88758c3fab?w=800&auto=format&fit=crop&q=60" alt="Northern Lights">
                 <div class="image-info">
-                    <p>Northern Lights</p>
+                    <p>Mountain Water</p>
                 </div>
             </div>
             <div class="image-card">
                 <img src="https://images.unsplash.com/photo-1759127352237-247ab3cb4548?w=800&auto=format&fit=crop&q=60" alt="Mountains">
                 <div class="image-info">
-                    <p>Mountains</p>
+                    <p>Buildings</p>
                 </div>
             </div>
             <div class="image-card">
                 <img src="https://images.unsplash.com/photo-1758944967510-844cf9078c35?w=800&auto=format&fit=crop&q=60" alt="Mountains">
                 <div class="image-info">
-                    <p>Beach</p>
+                    <p>Pantheon</p>
                 </div>
             </div>
             <div class="image-card">
                 <img src="https://images.unsplash.com/photo-1759503408354-8cfa8a13115e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mountains">
                 <div class="image-info">
-                    <p>Beach</p>
+                    <p>Volcano</p>
                 </div>
             </div>
             <div class="image-card">
@@ -484,7 +587,85 @@ ul li a:hover {
     </div>
 
     <footer>
-        <p>© 2025 MiniSplash. Free stock photos inspired by Unsplash.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Join the team</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <!-- Product Section -->
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="#">Get Unsplash+</a></li>
+                        <li><a href="#">Developers/API</a></li>
+                        <li><a href="#">Unsplash Dataset</a></li>
+                        <li><a href="#">Apps & Plugins</a></li>
+                        <li><a href="#">Unsplash Studio</a></li> 
+                        <li><a href="#">Product Placement Ads</a></li>
+                    </ul>
+                </div>
+                <!-- Community Section -->
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="#">Become a contributor</a></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">Trends</a></li>
+                        <li><a href="#">Unsplash Awards</a></li>
+                        <li><a href="#">Stats</a></li>
+                    </ul>
+                </div>
+                <!-- Explore Section -->
+                <div class="footer-section">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="#">Today</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Backgrounds</a></li>
+                        <li><a href="#">Wallpapers</a></li>
+                    </ul>
+                </div>
+                <!-- Legal Section -->
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.x.com" target="_blank" aria-label="X">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p>© 2025 Unsplash. Free stock photos and illustrations.</p>
     </footer>
 
     <script>
