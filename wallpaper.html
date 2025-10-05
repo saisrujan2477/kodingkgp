@@ -125,13 +125,6 @@ ul li a:hover {
             display: flex;
         }
 
-        .swap{
-            display: flex;
-            flex-direction: column;
-            align-items: left;
-            background-color: rgb(226, 226, 222);
-        }
-
         /* Main Content */
         .main-content {
             flex: 1;
@@ -150,6 +143,20 @@ ul li a:hover {
             position: sticky;
             top: 0;
             z-index: 100;
+        }
+
+        .swap{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            background-color: rgb(226, 226, 222);
+        }
+
+        .swap{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            background-color: rgb(226, 226, 222);
         }
 
         .desktop-header .search-bar input {
@@ -172,10 +179,29 @@ ul li a:hover {
             color: #111;
         }
 
+        .desktop-header .top-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .desktop-header .top-nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #767676;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .desktop-header .top-nav a:hover {
+            color: #111;
+        }
+
         /* Hero Section */
         .hero {
             margin-top: 20px;
-            background: url('https://images.unsplash.com/photo-1754764464593-638adca1eb4f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI5fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D') no-repeat center center/cover;
+            background: url('https://plus.unsplash.com/premium_vector-1738751781897-435d4079f3c3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8SWY2NUF1Tk9PeFF8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
             height: 400px;
             display: flex;
             align-items: center;
@@ -483,6 +509,7 @@ ul li a:hover {
     <!-- Main Content -->
     <main class="main-content">
         <header class="desktop-header">
+            
             <div class="search-bar">
                 <input type="text" placeholder="Search photos...">
             </div>
@@ -493,110 +520,111 @@ ul li a:hover {
                 <a href="login.html">Login</a>
                 <a href="#">Submit an image</a>
             </div>
-	
+            
         </header>
-
         <section class="swap">
             <div class="top-nav">
-                <a href="Unsplash.html">Featured</a>
-                <a href="Nature.html">Nature</a>
+                <a href="illu.html">Featured</a>
+                <a href="wallpaper.html">Wallpapers</a>
             </div>
-        </section>
+
+           </section>
 
         <section class="hero">
             <div class="hero-content">
-                <h1>Unsplash</h1>
-                <p>Beautiful, free photos and illustrations that you can download and use for any project.</p>
+                <h1>Wallpapers</h1>
+                <p>Explore illustrations that are perfect for bringing personality and style to your desktop or mobile background.</p>
                 <div class="search-bar">
-                    <input type="text" placeholder="Search photos...">
+                    <input type="text" placeholder="Search wallpapers...">
                 </div>
             </div>
         </section>
 
         <section class="trending-searches">
-            <button>Alaska</button>
-            <button>Astrophotography</button>
-            <button>Graphic Design</button>
-            <button>Acropolis</button>
-            <button>Chevrolet</button>
-            <button>Art Class</button>
+            <button>3D</button>
+            <button>Patterns</button>
+            <button>Hand Drawn</button>
+            <button>Icons</button>
+            <button>Line Art</button>
+            <button>Flat</button>
             <p>Explore trending searches</p>
         </section>
 
         <section class="image-grid">
             <div class="image-card">
-                <img src="https://images.unsplash.com/photo-1758633370468-686fba5ead85?w=800&auto=format&fit=crop&q=60" alt="Looking out of a window">
+                <img src="https://plus.unsplash.com/premium_vector-1736749054206-8dcd81e62a50?q=80&w=792&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Design">
                 <div class="image-info">
-                    <p>Looking out of a window</p>
+                    <p>Black BG with blue&pink design</p>
                 </div>
             </div>
             <div class="image-card">
-                <img src="https://images.unsplash.com/photo-1759130087819-db88758c3fab?w=800&auto=format&fit=crop&q=60" alt="Mountain Water">
-                <div class="image-info">
-                    <p>Mountain Water</p>
-                </div>
+                    <img src="https://plus.unsplash.com/premium_vector-1698192128950-03bde4cddbc4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE0fElmNjVBdU5PT3hRfHxlbnwwfHx8fHw%3D" alt="Planets">
+                    <div class="image-info">
+                        <p>Planets with hand</p>
+                    </div>
             </div>
             <div class="image-card">
-                <img src="https://images.unsplash.com/photo-1759127352237-247ab3cb4548?w=800&auto=format&fit=crop&q=60" alt="Buildings">
-                <div class="image-info">
-                    <p>Buildings</p>
-                </div>
+                    <img src="https://images.unsplash.com/vector-1748676386752-a9f7809f1f1a?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Giraffe">
+                    <div class="image-info">
+                        <p>Giraffe Potrait</p>
+                    </div>
             </div>
             <div class="image-card">
-                <img src="https://images.unsplash.com/photo-1758944967510-844cf9078c35?w=800&auto=format&fit=crop&q=60" alt="Pantheon">
-                <div class="image-info">
-                    <p>Pantheon</p>
-                </div>
+                    <img src="https://plus.unsplash.com/premium_vector-1738664137266-ba6eb01617b1?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Black cat sitting on top of a counter">
+                    <div class="image-info">
+                        <p>Black cat on counter</p>
+                    </div>
             </div>
             <div class="image-card">
-                <img src="https://images.unsplash.com/photo-1759503408354-8cfa8a13115e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Volcano">
-                <div class="image-info">
-                    <p>Volcano</p>
-                </div>
+                    <img src="https://images.unsplash.com/vector-1758762755638-ad34f009a7f9?q=80&w=1098&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Red Crab">
+                    <div class="image-info">
+                        <p>Red Crab in wrapper</p>
+                    </div>
             </div>
             <div class="image-card">
-                <img src="https://plus.unsplash.com/premium_photo-1759494145084-7cdfa7049c13?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8" alt="Mushroom">
-                <div class="image-info">
-                    <p>Mushroom</p>
-                </div>
+                    <img src="https://plus.unsplash.com/premium_vector-1715711046077-0ae1d1ed7673?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Plant">
+                    <div class="image-info">
+                        <p>Plant</p>
+                    </div>
             </div>
             <div class="image-card">
-                <img src="https://images.unsplash.com/photo-1759503076789-f35229bf5123?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8" alt="Women in dramatic sunlight">
-                <div class="image-info">
-                    <p>Women in dramatic sunlight</p>
-                </div>
+                    <img src="https://images.unsplash.com/vector-1738262151192-ba3d1a40fb27?q=80&w=663&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cofee Shop">
+                    <div class="image-info">
+                        <p>Coffee Shop</p>
+                    </div>
             </div>
             <div class="image-card">
-                <img src="https://images.unsplash.com/photo-1759352371478-6071563e058a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1MXx8fGVufDB8fHx8fA%3D%3D" alt="Lion">
-                <div class="image-info">
-                    <p>Lion</p>
-                </div>
+                    <img src="https://plus.unsplash.com/premium_vector-1757573536955-d5f68ef17cab?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pixelart with snake and flower">
+                    <div class="image-info">
+                        <p>Pixel art</p>
+                    </div>
             </div>
             <div class="image-card">
-                <img src="https://images.unsplash.com/photo-1759504677326-ed09c6dc7bc8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8" alt="Skyscraper in illuminated light">
-                <div class="image-info">
-                    <p>Skyscraper in illuminated light</p>
-                </div>
+                    <img src="https://plus.unsplash.com/premium_vector-1752785898167-b82141314966?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pattern of green and yellow mushrooms">
+                    <div class="image-info">
+                        <p>Pattern of mushrooms</p>
+                    </div>
             </div>
             <div class="image-card">
-                <img src="https://plus.unsplash.com/premium_photo-1759353494863-d4da32a4b5cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0OXx8fGVufDB8fHx8fA%3D%3D" alt="Owl">
-                <div class="image-info">
-                    <p>Owl</p>
-                </div>
+                    <img src="https://images.unsplash.com/vector-1756134095703-459bd2d1a671?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Woman with a floral head dress">
+                    <div class="image-info">
+                        <p>Woman with a floral headdress</p>
+                    </div>
             </div>
             <div class="image-card">
-                <img src="https://images.unsplash.com/photo-1759263888702-46b3b86c2bb3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D" alt="Shadow of a hand">
-                <div class="image-info">
-                    <p>Shadow of a hand</p>
-                </div>
+                    <img src="https://plus.unsplash.com/premium_vector-1748964962680-387ec1116355?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Abstract Art">
+                    <div class="image-info">
+                        <p>Abstract Art</p>
+                    </div>
             </div>
             <div class="image-card">
-                <img src="https://images.unsplash.com/photo-1759509326919-7f5d3961f8f1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D" alt="Train at modern station">
-                <div class="image-info">
-                    <p>Train at modern station</p>
-                </div>
+                    <img src="https://images.unsplash.com/vector-1757132411560-f0cfc21eca4e?q=80&w=722&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Four Fish">
+                    <div class="image-info">
+                        <p>Four Colourful fishes</p>
+                    </div>
             </div>
-            
+
+
     </main>
     </div>
 
